@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"content="width=device-width, initial-scale=1"/>
+    <title>Resume</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body{ padding-top: 70px;}
+    </style>
+    <script src="scripts/jquery-2.1.3.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="navbar-brand">Personal Homepage</div>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#divNav">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="divNav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <button type="button" class="btn btn-success navbar-btn" data-toggle="modal" data-target="#divModal" title="Print">Print</button>
+                            <div class="modal fade" id="divModal" data-backdrop="false">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                            <h4 class="modal-title">Print Resume</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Print Preview or Print Config
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Print</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-info navbar-btn" data-toggle="tooltip" data-placement="bottom" title="Download">Download</button>
+                            <script>
+                                $(function () {
+                                    $('[data-toggle="tooltip"]').tooltip();
+                                });
+                            </script>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">Personal Information</div>
+                <div class="panel-body">
+                    <p class="text-center text-primary">Zhe Ye</p>
+                    <address>
+                        <span class="glyphicon glyphicon-home" title="Address"> Buffalo,NY,14228</span>
+                        <span class="glyphicon glyphicon-phone" title="Mobile"> (352)678-7474</span>
+                        <span class="glyphicon glyphicon-envelope" title="Email"> 
+                            <a href="mailto:zheye@buffalo.edu"> zheye@buffalo.edu</a>
+                        </span>
+                    </address>
+                </div>
+
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading">Personal Skills</div>
+                <div class="panel-body">               
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="text-muted">Java</span>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="text-muted">Python</span>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="text-muted">HTML</span>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="text-muted">JavaScript</span>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="text-muted">CSS</span>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="text-muted">SQL</span>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">Contact Me</div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputName" placeholder="Name" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary pull-right">Send</button>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="jumbotron">
+                <p>I have strong knowledge and experience in Android Development, Web Development and Machine Learning. project details can be found <a href="https://github.com/ssgdla">here</a></p>
+            </div>
+
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a href="#collapseOne" data-toggle="collapse" data-parent="#accordion">Work Experence</a>
+                        </div>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-success">
+                                    <div class="row">                                        
+                                        <div class="col-sm-4"><strong>Engineer Intern, Software Inc</strong></div>
+                                        <div class="text-right"><strong>05/2017 - 07/2017</strong></div>
+                                        <br />
+                                        <p style="margin-left:15px">
+                                              Designed Backend Data Model and Implemented Data Extraction Layer for Inke Live Stream Project using Python in SecureCRT. Stream quality data from co-op Inke Live Platform were updated
+                                            in real time and organized in huge file system in company's server. Developed precise data extractoin process using Python scripts and effectively shorten time spent from original 2 hours
+                                            to less than 10 minutes.
+                                        </p>
+                                        <p style="margin-left:15px">
+                                            Built Data Model to monitor rate of lag free of different stream lines. Teamed with development team to find settings of optimization for server live stream transmission to reduce operation loads.
+                                        </p>
+                                        <p style="margin-left:15px">
+                                            Developed more precise analysis rules and calculations regarding using delta model to visualize and quantify change and difference of live streams.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion">Education</a>
+                        </div>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-success">
+                                    <div class="row">
+                                        <div class="col-sm-10"><strong>M.S.,Computer Science(GPA 3.83/4.0)</strong></div>
+                                        <div class="col-sm-offset-2">expected 01/2018</div> 
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-10">University at Buffalo, the State University of New York</div> 
+                                    </div>       
+                                </li>
+                                <li class="list-group-item list-group-item-warning">
+                                    <div class="row">
+                                        <div class="col-sm-10"><strong>M.S.,Electrical and Computer Engineering(GPA 3.5/4.0)</strong></div>
+                                        <div class="col-sm-offset-2">08/2013 - 05/2015</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-10">University of Florida</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-info">
+                                    <div class="row">
+                                        <div class="col-sm-10"><strong>B.S.,Materials Science and Engineering(GPA 3.3/4.0)</strong></div>
+                                        <div class="col-sm-offset-2">2009/09 - 06/2013</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-10">University of Science and Technology Beijing, China</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a href="#collapseThree" data-toggle="collapse" data-parent="#accordion">Project</a>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div id="divCarousel" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#divCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#divCarousel" data-slide-to="1" class="active"></li>
+                                        <li data-target="#divCarousel" data-slide-to="2" class="active"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="images/a.jpg" alt="..." class="img-responsive img-rounded"/>
+                                            <div class="carousel-caption">...</div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/b.jpg" alt="..." class="img-responsive img-rounded" />
+                                            <div class="carousel-caption">...</div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/c.jpg" alt="..." class="img-responsive img-rounded" />
+                                            <div class="carousel-caption">...</div>
+                                        </div>
+                                    </div>
+                                    <a class="left carousel-control" href="#divCarousel" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+                                    <a class="right carousel-control" href="#divCarousel" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <nav class="navbar-default navbar-fixed-bottom text-center">
+            All images and contents &copy; Zhe Ye
+        </nav>
+    </footer>
+
+
+
+</body>
+</html>
